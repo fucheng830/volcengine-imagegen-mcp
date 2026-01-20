@@ -1,0 +1,37 @@
+{
+  "name": "volcengine-imagegen-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Volcengine AI image generation (豆包生图)",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "volcengine-imagegen-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "volcengine",
+    "image-generation",
+    "doubao",
+    "火山引擎"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "axios": "^1.7.9",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
