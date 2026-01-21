@@ -61,21 +61,21 @@ export ARK_API_KEY="你的火山引擎API密钥"
 
 > 💡 **配置方式说明**：
 > 不同应用的配置格式略有不同：
-> - **Claude Desktop**: 使用 `"mcpServers"` 键，配置简单（见下方）
+> - **Claude Code/Claude Desktop**: 使用 `"mcpServers"` 键，配置简单（见下方）
 > - **VS Code**: 使用 `"servers"` 键，需要指定 `"type": "stdio"`（见下方）
-> - **Cursor/Trae**: 配置格式类似 Claude Desktop
+> - **Cursor/Trae**: 配置格式类似 Claude Code/Claude Desktop
 
 ## 🚀 使用方法
 
-### 在 Claude Desktop 中使用
+### 在 Claude Code / Claude Desktop 中使用
 
-1. 打开 Claude Desktop 设置
+1. 打开 Claude Code 或 Claude Desktop 设置
 2. 找到 MCP Servers 配置项
 3. 添加新服务器：
    - **名称**: `volcengine-imagegen-mcp`
    - **命令**: `npx volcengine-imagegen-mcp`
    - **环境变量**: `ARK_API_KEY=你的API密钥`
-4. 保存配置并重启 Claude Desktop
+4. 保存配置并重启应用
 
 ### 在 VS Code 中使用
 
