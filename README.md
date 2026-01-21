@@ -100,6 +100,16 @@ export ARK_API_KEY="你的火山引擎API密钥"
 4. 重新加载 VS Code 窗口（`Ctrl+Shift+P` → "Developer: Reload Window"）
 5. 打开 Copilot Chat（`Ctrl+Alt+I`），在工具选择器中启用 `volcengine-imagegen` 服务器的工具
 
+> 💡 **工具选择说明**：
+> VS Code 中有两种方式管理 MCP 工具：
+> 1. **工具选择器按钮**：在 Chat 输入框上方点击工具图标（🛠️），可以单独启用/禁用每个工具
+> 2. **Chat 输入中指定**：在提示中直接引用工具，如 `#generate_image`
+> 3. **全局配置**：在设置中通过 `chat.mcp.enabledServers` 控制哪些服务器可用
+> 
+> **使用示例**：
+> - 禁用所有工具后只使用 `#generate_image` 和 `#list_models`
+> - 或通过工具选择器只勾选 `generate_image` 相关工具
+> 
 > 💡 详细配置说明请查看 [VS Code 配置指南](./CLAUDE_AND_VSCODE_GUIDE.md)
 
 ### 在 Cursor 中使用
