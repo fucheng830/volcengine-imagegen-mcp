@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * 火山引擎 AI 生图 MCP 服务器
  * 纯 Node.js + TypeScript 实现（不使用 zod）

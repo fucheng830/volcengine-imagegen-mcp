@@ -1,6 +1,6 @@
 {
   "name": "volcengine-imagegen-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MCP server for Volcengine AI image generation (豆包生图)",
   "type": "module",
   "main": "dist/index.js",
