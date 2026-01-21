@@ -4,7 +4,7 @@
 [![npm version](https://badge.fury.io/js/volcengine-imagegen-mcp.svg)](https://www.npmjs.com/package/volcengine-imagegen-mcp)
 [![MCP](https://img.shields.io/badge/MCP-Model%20Context%20Protocol-blue)](https://modelcontextprotocol.io)
 
-> 基于 Model Context Protocol (MCP) 的服务器，为 Claude Desktop、Cursor、Trae 等 AI 应用提供火山引擎豆包生图能力。
+> 纯 Node.js + TypeScript 实现的 MCP 服务器，为 Claude Desktop、VS Code、Cursor、Trae 等 AI 应用提供火山引擎豆包生图能力。
 
 ## ✨ 特性
 
@@ -316,6 +316,13 @@ npm run dev
 5. 开启 Pull Request
 
 ## 📞 支持
+
+- 🐛 [问题反馈](https://github.com/fucheng830/volcengine-imagegen-mcp/issues)
+- 📖 [火山引擎文档](https://www.volcengine.com/docs/)
+- 📖 [VS Code 配置指南](./CLAUDE_AND_VSCODE_GUIDE.md)
+- 💬 [讨论区](https://github.com/fucheng830/volcengine-imagegen-mcp/discussions)
+
+## 🔗 相关链接
 
 - 🐛 [问题反馈](https://github.com/fucheng830/volcengine-imagegen-mcp/issues)
 - 📖 [火山引擎文档](https://www.volcengine.com/docs/)

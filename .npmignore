@@ -1,0 +1,40 @@
+# Source files
+src/
+*.ts
+tsconfig.json
+
+# Documentation (excluding README and LICENSE)
+CLAUDE_AND_VSCODE_GUIDE.md
+
+# Environment and config
+.env
+.env.example
+*.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Git
+.git/
+.gitignore
+.github/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Node
+node_modules/
+
+# Build artifacts (excluding dist)
+coverage/
+.nyc_output/

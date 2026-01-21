@@ -20,12 +20,25 @@
     "doubao",
     "火山引擎"
   ],
-  "author": "",
+  "author": "fucheng830",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fucheng830/volcengine-imagegen-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fucheng830/volcengine-imagegen-mcp/issues"
+  },
+  "homepage": "https://github.com/fucheng830/volcengine-imagegen-mcp#readme",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.4",
-    "axios": "^1.7.9",
-    "zod": "^3.24.1"
+    "axios": "^1.7.9"
   },
   "devDependencies": {
     "@types/node": "^22.10.5",
@@ -33,5 +46,8 @@
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -16,6 +16,15 @@ build/
 .env.local
 .env.*.local
 
+# Python files (removed, now Node.js only)
+*.py
+*.pyc
+__pycache__/
+venv/
+env/
+requirements.txt
+pytest.ini
+
 # IDE
 .vscode/
 .idea/
@@ -29,3 +38,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Package files
+*.tgz
