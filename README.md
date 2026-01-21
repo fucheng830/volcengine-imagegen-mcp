@@ -71,6 +71,31 @@ export ARK_API_KEY="你的火山引擎API密钥"
    - **环境变量**: `ARK_API_KEY=你的API密钥`
 4. 保存配置并重启 Claude Desktop
 
+### 在 VS Code 中使用
+
+1. 确保已安装 VS Code 1.102 或更高版本
+2. 在工作区根目录创建 `.vscode/mcp.json` 文件
+3. 添加以下配置：
+   ```json
+   {
+     "servers": {
+       "volcengine-imagegen": {
+         "type": "stdio",
+         "command": "npx",
+         "args": ["volcengine-imagegen-mcp"],
+         "env": {
+           "ARK_API_KEY": "你的API密钥"
+         }
+       }
+     },
+     "inputs": []
+   }
+   ```
+4. 重新加载 VS Code 窗口（`Ctrl+Shift+P` → "Developer: Reload Window"）
+5. 打开 Copilot Chat（`Ctrl+Alt+I`），在工具选择器中启用 `volcengine-imagegen` 服务器的工具
+
+> 💡 详细配置说明请查看 [VS Code 配置指南](./CLAUDE_AND_VSCODE_GUIDE.md)
+
 ### 在 Cursor 中使用
 
 1. 打开 Cursor 设置
