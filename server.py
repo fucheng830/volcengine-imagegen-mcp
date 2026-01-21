@@ -18,10 +18,10 @@ from pydantic import BaseModel, Field
 API_BASE_URL = "https://ark.cn-beijing.volces.com/api/v3"
 
 SUPPORTED_MODELS = {
-    "doubao-seedream-4.5": "豆包生图 4.5 (最新，支持多格式)",
-    "doubao-seedream-4.0": "豆包生图 4.0",
-    "doubao-seedream-3.0-t2i": "豆包生图 3.0 文生图",
-    "doubao-seedream-3.0-i2i": "豆包生图 3.0 图生图"
+    "doubao-seedream-4-5-251128": "豆包生图 4.5 (最新，支持多格式)",
+    "doubao-seedream-4-0-250828": "豆包生图 4.0",
+    "doubao-seedream-3-0-t2i-250415": "豆包生图 3.0 文生图",
+    "doubao-seedream-3-0-i2i": "豆包生图 3.0 图生图 (模型ID未在列表中)"
 }
 
 SUPPORTED_SIZES = ["2K", "4K", "1024x1024", "2048x2048"]
@@ -32,7 +32,7 @@ SUPPORTED_SIZES = ["2K", "4K", "1024x1024", "2048x2048"]
 class GenerateImageParams(BaseModel):
     """文生图参数"""
     model: str = Field(
-        default="doubao-seedream-4.5",
+        default="doubao-seedream-4-5-251128",
         description="使用的模型ID"
     )
     prompt: str = Field(
@@ -62,15 +62,15 @@ class GenerateImageParams(BaseModel):
     count: int = Field(
         default=1,
         ge=1,
-        le=4,
-        description="生成图片数量（1-4张）"
+        le=1,
+        description="生成图片数量（当前仅支持1张，批量生成功能暂不可用）"
     )
 
 
 class ImageToImageParams(BaseModel):
     """图生图参数"""
     model: str = Field(
-        default="doubao-seedream-4.5",
+        default="doubao-seedream-4-5-251128",
         description="使用的模型ID（仅支持 doubao-seedream-4.5/4.0）"
     )
     prompt: str = Field(
@@ -108,7 +108,7 @@ class ImageToImageParams(BaseModel):
 class GenerateImageSetParams(BaseModel):
     """组图生成参数"""
     model: str = Field(
-        default="doubao-seedream-4.5",
+        default="doubao-seedream-4-5-251128",
         description="使用的模型ID（仅支持 doubao-seedream-4.5/4.0）"
     )
     prompt: str = Field(
@@ -473,7 +473,7 @@ async def list_models() -> List[TextContent]:
 
 # ==================== 主程序 ====================
 
-async def main():
+def main():
     """启动 MCP 服务器"""
     print("✅ 火山引擎 AI 生图 MCP 服务器已启动！")
     print("📋 可用工具：")
@@ -482,8 +482,9 @@ async def main():
     print("  - generate_image_set: 组图生成")
     print("  - list_models: 获取模型列表")
     
-    await mcp.run()
+    # FastMCP 自动处理 asyncio
+    mcp.run()
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()
